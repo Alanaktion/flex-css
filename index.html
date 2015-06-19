@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Flex CSS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/flex.css">
+	<link rel="stylesheet" type="text/css" href="css/docs.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Flex CSS</h1>
+		<p>A minimal, responsive CSS framework built on flexbox</p>
+
+		<p><i>Note: this is still under early development, and isn't worth using yet.</i></p>
+
+		<hr>
+
+		<h2>Grid</h2>
+		<p>The typical row/column layout is easier than ever with Flex CSS. Start with a <code>.grid</code> element, and add <code>.cell</code> elements inside it. You can place as many <code>.cell</code> elements as you need and they'll fit the full width automatically. Grid items can also be nested.</p>
+		<div class="grid example-grid">
+			<div class="cell">
+				<div class="example-box"></div>
+			</div>
+			<div class="cell">
+				<div class="example-box"></div>
+			</div>
+			<div class="cell">
+				<div class="example-box"></div>
+			</div>
+			<div class="cell">
+				<div class="example-box"></div>
+			</div>
+			<div class="cell">
+				<div class="example-box"></div>
+			</div>
+		</div>
+		<div class="grid example-grid">
+			<div class="cell">
+				<div class="example-box"></div>
+			</div>
+			<div class="cell">
+				<div class="example-box"></div>
+			</div>
+			<div class="cell">
+				<div class="example-box"></div>
+			</div>
+			<div class="cell">
+				<div class="example-box"></div>
+			</div>
+		</div>
+
+		<h3>Nesting Cells</h3>
+		<p>You can use nested cells by putting another <code>.grid</code> within a <code>.cell</code>.</p>
+		<div class="grid example-grid">
+			<div class="cell">
+				<div class="example-box">
+					<div class="grid">
+						<div class="cell">
+							<div class="example-box"></div>
+						</div>
+						<div class="cell">
+							<div class="example-box"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cell">
+				<div class="example-box">
+					<div class="grid">
+						<div class="cell">
+							<div class="example-box"></div>
+						</div>
+						<div class="cell">
+							<div class="example-box"></div>
+						</div>
+						<div class="cell">
+							<div class="example-box"></div>
+						</div>
+						<div class="cell">
+							<div class="example-box"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cell">
+				<div class="example-box">
+					<div class="grid">
+						<div class="cell">
+							<div class="example-box"></div>
+						</div>
+						<div class="cell">
+							<div class="example-box"></div>
+						</div>
+						<div class="cell">
+							<div class="example-box"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h3>Column Widths</h3>
+		<p>If you need to specify column widths, you can add a fractional class like <code>one-half</code>, <code>one-fifth</code>, <code>two-thirds</code>, etc. When using width classes or other custom widths, cells will wrap to new lines automatically when there isn't enough width to fit them all.</p>
+		<div class="grid example-grid">
+			<div class="cell one-fifth">
+				<div class="example-box"></div>
+			</div>
+			<div class="cell one-third">
+				<div class="example-box"></div>
+			</div>
+			<div class="cell">
+				<div class="example-box"></div>
+			</div>
+		</div>
+
+		<h3>Responsive Grid</h3>
+		<p>All top-level grids will change their columns to rows on devices under <code>768px</code> width. You can force either a row or column layout by adding <code>.row</code> or <code>.column</code> class to a <code>.grid</code> element.</p>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "flex-css",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "author": "Alan Hardman <alan@phpizza.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.1.6",
+    "gulp-notify": "^2.2.0"
+  }
+}
