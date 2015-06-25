@@ -88,11 +88,11 @@ form input + .btn {
 		margin: 0;
 		border-radius: 0;
 	}
-	:first-child {
+	:first-child:not(.input) {
 		border-radius: @border-radius 0 0 @border-radius;
 		border-right: none;
 	}
-	:last-child {
+	:last-child:not(.input) {
 		border-radius: 0 @border-radius @border-radius 0;
 		border-left: none;
 	}
