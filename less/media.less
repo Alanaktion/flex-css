@@ -1,0 +1,28 @@
+// media.less
+// Media object system
+
+.media {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: .5em 0;
+
+	.media-figure {
+		margin-right: 1em;
+	}
+	&.reverse {
+		.media-figure {
+			order: 1;
+			margin-right: 0;
+			margin-left: 1em;
+		}
+	}
+	.media-body {
+		flex: 1;
+		:first-child {
+			margin-top: 0;
+		}
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -12,7 +12,7 @@
 		<h1>Flex CSS</h1>
 		<p>A minimal, responsive CSS framework built on flexbox</p>
 
-		<p><i>Note: this is still under early development, and isn't worth using yet.</i></p>
+		<p><i>Note: this is still under early development, and probably isn't worth using yet.</i></p>
 
 		<hr>
 
@@ -33,7 +33,7 @@
 			<div class="cell"></div>
 			<div class="cell"></div>
 		</div>
-		<div class="grid example-grid">
+		<div class="grid example-grid text-center">
 			<div class="cell">Columns automatically fill the full height too!</div>
 			<div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 		</div>
@@ -57,7 +57,7 @@
 
 		<h3>Column Widths</h3>
 		<p>If you need to specify column widths, you can add a fractional class like <code>one-half</code>, <code>one-fifth</code>, <code>two-thirds</code>, etc. When using width classes or other custom widths, cells will wrap to new lines automatically when there isn't enough width to fit them all.</p>
-		<div class="grid example-grid">
+		<div class="grid example-grid text-center">
 			<div class="cell one-fifth">1/5</div>
 			<div class="cell one-third">1/3</div>
 			<div class="cell">(auto width)</div>
@@ -68,7 +68,7 @@
 
 		<h3>Alignment</h3>
 		<p><code>.cell</code>s can be aligned within a <code>.grid</code> by adding <code>.cell-top</code>, <code>.cell-center</code>, or <code>.cell-bottom</code>.</p>
-		<div class="grid example-grid">
+		<div class="grid example-grid text-center">
 			<div class="cell cell-top">This cell is top-aligned.</div>
 			<div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 			<div class="cell cell-center">This cell is center-aligned.</div>
@@ -137,7 +137,63 @@
 			</div>
 		</form>
 
+		<hr>
+
+		<h2>Media Objects</h2>
+		<p>Media objects can represent comments, blog posts, and more.</p>
+		<br>
+		<div class="grid example-grid">
+			<div class="cell">
+				<div class="media">
+					<img class="media-figure" src="https://www.gravatar.com/avatar/?d=mm&amp;s=60">
+					<div class="media-body">
+						<h3>John Smith</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					</div>
+				</div>
+			</div>
+			<div class="cell">
+				<div class="media">
+					<img class="media-figure" src="https://www.gravatar.com/avatar/?d=mm&amp;s=60">
+					<div class="media-body">
+						<h3>John Smith</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<div class="media">
+							<img class="media-figure" src="https://www.gravatar.com/avatar/?d=mm&amp;s=40">
+							<div class="media-body">
+								<p>Donec tortor massa, eleifend nec viverra in, aliquet at eros. Mauris laoreet condimentum mauris, non tempor massa fermentum ut.</p>
+							</div>
+						</div>
+						<div class="media">
+							<img class="media-figure" src="https://www.gravatar.com/avatar/?d=mm&amp;s=40">
+							<div class="media-body">
+								<p>Etiam posuere lectus sed sapien malesuada molestie. Aliquam vitae pharetra dolor. Nullam non mattis nunc.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h3>Reversed</h3>
+		<p>You can reverse the order of a media object by adding a <code>.reverse</code> to the element.</p>
+		<br>
+		<div class="grid example-grid">
+			<div class="cell">
+				<div class="media reverse">
+					<img class="media-figure" src="https://www.gravatar.com/avatar/?d=mm">
+					<div class="media-body">
+						<h3>John Smith</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<p>By <a href="https://github.com/Alanaktion">Alan Hardman</a>, under the <a href="https://github.com/Alanaktion/flex-css/blob/master/LICENSE">MIT License</a></p>
+
 	</div>
-	<br><br><br>
 </body>
 </html>

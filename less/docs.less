@@ -12,6 +12,12 @@ hr {
 	margin: 2em 0 1em;
 }
 
+.example-box {
+	border: 1px solid @base-color;
+	border-radius: @border-radius;
+	padding: 1em;
+}
+
 .grid.example-grid {
 	/*position: relative;
 	&:after {
@@ -27,10 +33,9 @@ hr {
 	.cell {
 		position: relative;
 		background: rgba(0,0,0,.1);
-		border-radius: .25em;
+		border-radius: @border-radius;
 		padding: .5em;
 		min-height: 1em;
-		text-align: center;
 
 		/*&:after {
 			content: '.cell';

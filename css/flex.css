@@ -215,6 +215,9 @@ form input + .btn {
 }
 .input-group {
   display: flex;
+  /*&:hover span {
+		border-color: @base-border-hover;
+	}*/
 }
 .input-group .input {
   flex: 1;
@@ -239,6 +242,28 @@ form input + .btn {
 .input-group :last-child {
   border-radius: 0 3px 3px 0;
   border-left: none;
+}
+.media {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: .5em 0;
+}
+.media .media-figure {
+  margin-right: 1em;
+}
+.media.reverse .media-figure {
+  order: 1;
+  margin-right: 0;
+  margin-left: 1em;
+}
+.media .media-body {
+  flex: 1;
+}
+.media .media-body :first-child {
+  margin-top: 0;
+}
+.media .media-body :last-child {
+  margin-bottom: 0;
 }
 img.responsive {
   display: inline-block;
