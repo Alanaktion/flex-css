@@ -19,104 +19,125 @@
 		<h2>Grid</h2>
 		<p>The typical row/column layout is easier than ever with Flex CSS. Start with a <code>.grid</code> element, and add <code>.cell</code> elements inside it. You can place as many <code>.cell</code> elements as you need and they'll fit the full width automatically. Grid items can also be nested.</p>
 		<div class="grid example-grid">
-			<div class="cell">
-				<div class="example-box"></div>
-			</div>
-			<div class="cell">
-				<div class="example-box"></div>
-			</div>
-			<div class="cell">
-				<div class="example-box"></div>
-			</div>
-			<div class="cell">
-				<div class="example-box"></div>
-			</div>
-			<div class="cell">
-				<div class="example-box"></div>
-			</div>
+			<div class="cell"></div>
+			<div class="cell"></div>
 		</div>
 		<div class="grid example-grid">
-			<div class="cell">
-				<div class="example-box"></div>
-			</div>
-			<div class="cell">
-				<div class="example-box"></div>
-			</div>
-			<div class="cell">
-				<div class="example-box"></div>
-			</div>
-			<div class="cell">
-				<div class="example-box"></div>
-			</div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+		</div>
+		<div class="grid example-grid">
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+		</div>
+		<div class="grid example-grid">
+			<div class="cell">Columns automatically fill the full height too!</div>
+			<div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 		</div>
 
 		<h3>Nesting Cells</h3>
 		<p>You can use nested cells by putting another <code>.grid</code> within a <code>.cell</code>.</p>
 		<div class="grid example-grid">
 			<div class="cell">
-				<div class="example-box">
-					<div class="grid">
-						<div class="cell">
-							<div class="example-box"></div>
-						</div>
-						<div class="cell">
-							<div class="example-box"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="cell">
-				<div class="example-box">
-					<div class="grid">
-						<div class="cell">
-							<div class="example-box"></div>
-						</div>
-						<div class="cell">
-							<div class="example-box"></div>
-						</div>
-						<div class="cell">
-							<div class="example-box"></div>
-						</div>
-						<div class="cell">
-							<div class="example-box"></div>
+				<div class="grid">
+					<div class="cell"></div>
+					<div class="cell">
+						<div class="grid">
+							<div class="cell"></div>
+							<div class="cell"></div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="cell">
-				<div class="example-box">
-					<div class="grid">
-						<div class="cell">
-							<div class="example-box"></div>
-						</div>
-						<div class="cell">
-							<div class="example-box"></div>
-						</div>
-						<div class="cell">
-							<div class="example-box"></div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div class="cell one-third"></div>
 		</div>
 
 		<h3>Column Widths</h3>
 		<p>If you need to specify column widths, you can add a fractional class like <code>one-half</code>, <code>one-fifth</code>, <code>two-thirds</code>, etc. When using width classes or other custom widths, cells will wrap to new lines automatically when there isn't enough width to fit them all.</p>
 		<div class="grid example-grid">
-			<div class="cell one-fifth">
-				<div class="example-box"></div>
-			</div>
-			<div class="cell one-third">
-				<div class="example-box"></div>
-			</div>
-			<div class="cell">
-				<div class="example-box"></div>
-			</div>
+			<div class="cell one-fifth">1/5</div>
+			<div class="cell one-third">1/3</div>
+			<div class="cell">(auto width)</div>
 		</div>
 
 		<h3>Responsive Grid</h3>
 		<p>All top-level grids will change their columns to rows on devices under <code>768px</code> width. You can force either a row or column layout by adding <code>.row</code> or <code>.column</code> class to a <code>.grid</code> element.</p>
 
+		<h3>Alignment</h3>
+		<p><code>.cell</code>s can be aligned within a <code>.grid</code> by adding <code>.cell-top</code>, <code>.cell-center</code>, or <code>.cell-bottom</code>.</p>
+		<div class="grid example-grid">
+			<div class="cell cell-top">This cell is top-aligned.</div>
+			<div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+			<div class="cell cell-center">This cell is center-aligned.</div>
+			<div class="cell cell-bottom">This cell is bottom-aligned.</div>
+		</div>
+
+		<hr>
+
+		<h2>Forms</h2>
+		<p>Flex CSS includes basic form styles, including support for input add-ons.</p>
+		<form>
+			<label for="name">Name</label>
+			<input type="text" class="input" name="name">
+			<label for="name">Email Address</label>
+			<input type="email" class="input" name="email">
+			<button type="submit" class="btn primary">Submit</button>
+			<button type="reset" class="btn">Reset</button>
+		</form>
+
+		<h3>Using the grid</h3>
+		<p>Forms work well with the grid system, allowing flexible layouts</p>
+		<form>
+			<div class="grid">
+				<label class="cell one-fourth" for="name">Name</label>
+				<div class="cell">
+					<input type="text" class="input" name="name">
+				</div>
+			</div>
+			<div class="grid">
+				<label class="cell one-fourth" for="email">Email Address</label>
+				<div class="cell">
+					<input type="email" class="input" name="email">
+				</div>
+			</div>
+			<div class="grid">
+				<div class="cell one-fourth"></div>
+				<div class="cell">
+					<button type="submit" class="btn">Submit</button>
+				</div>
+			</div>
+		</form>
+
+		<h3>Input groups</h3>
+		<p>Merge buttons, inputs, and spans into single components</p>
+		<form>
+			<div class="grid">
+				<div class="cell">
+					<div class="input-group">
+						<input type="text" class="input">
+						<button class="btn primary">Go</button>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="input-group">
+						<span>Text</span>
+						<input type="text" class="input">
+						<button class="btn">Button</button>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="input-group">
+						<span>Text</span>
+						<input type="text" class="input">
+					</div>
+				</div>
+			</div>
+		</form>
+
 	</div>
+	<br><br><br>
 </body>
 </html>

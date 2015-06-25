@@ -13,10 +13,10 @@ hr {
 code {
 	display: inline;
 	background-color: lighten(@base-color, 10%);
-	border-radius: .5em;
+	border-radius: @border-radius;
 	padding: .125em .5em;
 }
 pre {
-	background-color: @base-color;
+	background-color: lighten(@base-color, 10%);
 	padding: 1em;
 }
