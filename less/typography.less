@@ -1,35 +1,61 @@
 // typography.less
-// Base typography settings
+// Mobile-first responsive typography
 
-body {
+@import url('http://fonts.googleapis.com/css?family=Lato:400,700');
+
+html {
 	font-family: @base-font;
-	font-size: @font-size;
+	font-size: @font-size-sm;
 }
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: @heading-font;
-	font-weight: @heading-weight;
-	margin: 1em 0 .5em;
-}
-h1 {
-	font-size: @font-size * 3;
-}
-h2 {
-	font-size: @font-size * 2;
-}
-h3 {
-	font-size: @font-size * 1.25;
-}
-h4 {
-	font-size: @font-size * 1.125;
-}
-h5 {
-	font-size: @font-size * .9;
-}
-h6 {
-	font-size: @font-size * .75;
+body {
+	line-height: @line-height-sm;
 }
 
 p {
 	margin: 0 0 .5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @heading-font;
+	margin: .75em 0 .4em;
+	font-weight: @heading-weight;
+}
+
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.625em;
+}
+h3 {
+	font-size: 1.375em;
+}
+h4 {
+	font-size: 1.125em;
+}
+h5 {
+	font-size: .9em;
+}
+h6 {
+	font-size: .75em;
+}
+
+// Desktop font sizes
+@media screen and (min-width: @desktop-width) {
+	html {
+		font-size: @font-size;
+	}
+	body {
+		line-height: @line-height;
+	}
+	h1 {
+		font-size: 3em;
+		line-height: 1.05em;
+	}
+	h2 {
+		font-size: 2.25em;
+	}
+	h3 {
+		font-size: 1.75em;
+	}
 }
