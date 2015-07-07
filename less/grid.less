@@ -14,9 +14,17 @@
 
 	// Grid direction overrides
 	&.row {
-		flex-direction: row;
+		flex-direction: row !important;
 	}
 	&.column {
+		flex-direction: column !important;
+	}
+
+	// Responsive grids
+	&.xs {
+		flex-direction: row;
+	}
+	&.sm, &.md, &.lg {
 		flex-direction: column;
 	}
 
@@ -40,6 +48,44 @@
 		flex: 1;
 		margin: 1em 0 0 1em;
 
+		// Cell sizing
+		&.one-half {
+			width: 50%;
+			flex: none;
+		}
+		&.one-third {
+			width: 33.3333%;
+			flex: none;
+		}
+		&.two-thirds {
+			width: 66.6666%;
+			flex: none;
+		}
+		&.one-fourth {
+			width: 25%;
+			flex: none;
+		}
+		&.three-fourths {
+			width: 75%;
+			flex: none;
+		}
+		&.one-fifth {
+			width: 20%;
+			flex: none;
+		}
+		&.two-fifths {
+			width: 40%;
+			flex: none;
+		}
+		&.three-fifths {
+			width: 60%;
+			flex: none;
+		}
+		&.four-fifths {
+			width: 80%;
+			flex: none;
+		}
+
 		// Cell alignment
 		&.cell-top {
 			align-self: flex-start;
@@ -53,53 +99,49 @@
 
 	}
 }
-.cell > .grid:last-child,
-.cell > * > .grid:last-child {
-	margin-bottom: 0;
-	flex-direction: row;
-}
 
-@media screen and (min-width: @desktop-width) {
+// Responsive orientation change
+@media screen and (min-width: @respond-min-sm) {
+	.grid.sm {
+		flex-direction: row;
+	}
+}
+@media screen and (min-width: @respond-min-md) {
+	.grid.md {
+		flex-direction: row;
+	}
+}
+@media screen and (min-width: @respond-min-lg) {
 	.grid {
 		flex-direction: row;
-		.cell {
-			// Cell sizing
-			&.one-half {
-				width: 50%;
-				flex: none;
-			}
-			&.one-third {
-				width: 33.3333%;
-				flex: none;
-			}
-			&.two-thirds {
-				width: 66.6666%;
-				flex: none;
-			}
-			&.one-fourth {
-				width: 25%;
-				flex: none;
-			}
-			&.three-fourths {
-				width: 75%;
-				flex: none;
-			}
-			&.one-fifth {
-				width: 20%;
-				flex: none;
-			}
-			&.two-fifths {
-				width: 40%;
-				flex: none;
-			}
-			&.three-fifths {
-				width: 60%;
-				flex: none;
-			}
-			&.four-fifths {
-				width: 80%;
-				flex: none;
-			}
+		&.lg {
+			flex-direction: row;
+		}
+	}
+}
+
+// Responsive width resets
+@media screen and (max-width: @respond-max-xs) {
+	.grid.sm .cell {
+		&.one-half, &.one-third, &.two-thirds, &.one-fourth, &.three-fourths, &.one-fifth, &.two-fifths, &.three-fifths, &.four-fifths {
+			width: auto;
+			flex: 1;
+		}
+	}
+}
+@media screen and (max-width: @respond-max-sm) {
+	.grid.md .cell {
+		&.one-half, &.one-third, &.two-thirds, &.one-fourth, &.three-fourths, &.one-fifth, &.two-fifths, &.three-fifths, &.four-fifths {
+			width: auto;
+			flex: 1;
+		}
+	}
+}
+@media screen and (max-width: @respond-max-md) {
+	.grid.lg .cell {
+		&.one-half, &.one-third, &.two-thirds, &.one-fourth, &.three-fourths, &.one-fifth, &.two-fifths, &.three-fifths, &.four-fifths {
+			width: auto;
+			flex: 1;
 		}
 	}
 }

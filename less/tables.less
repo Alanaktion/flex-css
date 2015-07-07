@@ -1,0 +1,26 @@
+// tables.less
+// Table formatting
+table.table {
+	width: 100%;
+	text-align: left;
+
+	td, th {
+		padding: .25em .5em;
+	}
+	thead {
+		td, th {
+			border-bottom: 2px solid @base-border;
+		}
+	}
+	tbody {
+		td, th {
+			border-bottom: 1px solid @base-border;
+		}
+		tr:last-child {
+			td, th {
+				border-bottom: none;
+			}
+		}
+	}
+
+}

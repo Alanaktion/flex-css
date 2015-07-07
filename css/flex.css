@@ -21,7 +21,7 @@ code {
   display: inline;
   background-color: #e6e6e6;
   border-radius: 3px;
-  padding: .125em .5em;
+  padding: .125em .25em;
 }
 pre {
   background-color: #e6e6e6;
@@ -95,9 +95,17 @@ h6 {
   margin: -1em 0 1em -1em;
 }
 .grid.row {
-  flex-direction: row;
+  flex-direction: row !important;
 }
 .grid.column {
+  flex-direction: column !important;
+}
+.grid.xs {
+  flex-direction: row;
+}
+.grid.sm,
+.grid.md,
+.grid.lg {
   flex-direction: column;
 }
 .grid.full-height {
@@ -116,6 +124,42 @@ h6 {
   flex: 1;
   margin: 1em 0 0 1em;
 }
+.grid .cell.one-half {
+  width: 50%;
+  flex: none;
+}
+.grid .cell.one-third {
+  width: 33.3333%;
+  flex: none;
+}
+.grid .cell.two-thirds {
+  width: 66.6666%;
+  flex: none;
+}
+.grid .cell.one-fourth {
+  width: 25%;
+  flex: none;
+}
+.grid .cell.three-fourths {
+  width: 75%;
+  flex: none;
+}
+.grid .cell.one-fifth {
+  width: 20%;
+  flex: none;
+}
+.grid .cell.two-fifths {
+  width: 40%;
+  flex: none;
+}
+.grid .cell.three-fifths {
+  width: 60%;
+  flex: none;
+}
+.grid .cell.four-fifths {
+  width: 80%;
+  flex: none;
+}
 .grid .cell.cell-top {
   align-self: flex-start;
 }
@@ -125,50 +169,64 @@ h6 {
 .grid .cell.cell-center {
   align-self: center;
 }
-.cell > .grid:last-child,
-.cell > * > .grid:last-child {
-  margin-bottom: 0;
-  flex-direction: row;
-}
 @media screen and (min-width: 768px) {
+  .grid.sm {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 992px) {
+  .grid.md {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1200px) {
   .grid {
     flex-direction: row;
   }
-  .grid .cell.one-half {
-    width: 50%;
-    flex: none;
+  .grid.lg {
+    flex-direction: row;
   }
-  .grid .cell.one-third {
-    width: 33.3333%;
-    flex: none;
+}
+@media screen and (max-width: 767px) {
+  .grid.sm .cell.one-half,
+  .grid.sm .cell.one-third,
+  .grid.sm .cell.two-thirds,
+  .grid.sm .cell.one-fourth,
+  .grid.sm .cell.three-fourths,
+  .grid.sm .cell.one-fifth,
+  .grid.sm .cell.two-fifths,
+  .grid.sm .cell.three-fifths,
+  .grid.sm .cell.four-fifths {
+    width: auto;
+    flex: 1;
   }
-  .grid .cell.two-thirds {
-    width: 66.6666%;
-    flex: none;
+}
+@media screen and (max-width: 991px) {
+  .grid.md .cell.one-half,
+  .grid.md .cell.one-third,
+  .grid.md .cell.two-thirds,
+  .grid.md .cell.one-fourth,
+  .grid.md .cell.three-fourths,
+  .grid.md .cell.one-fifth,
+  .grid.md .cell.two-fifths,
+  .grid.md .cell.three-fifths,
+  .grid.md .cell.four-fifths {
+    width: auto;
+    flex: 1;
   }
-  .grid .cell.one-fourth {
-    width: 25%;
-    flex: none;
-  }
-  .grid .cell.three-fourths {
-    width: 75%;
-    flex: none;
-  }
-  .grid .cell.one-fifth {
-    width: 20%;
-    flex: none;
-  }
-  .grid .cell.two-fifths {
-    width: 40%;
-    flex: none;
-  }
-  .grid .cell.three-fifths {
-    width: 60%;
-    flex: none;
-  }
-  .grid .cell.four-fifths {
-    width: 80%;
-    flex: none;
+}
+@media screen and (max-width: 1199px) {
+  .grid.lg .cell.one-half,
+  .grid.lg .cell.one-third,
+  .grid.lg .cell.two-thirds,
+  .grid.lg .cell.one-fourth,
+  .grid.lg .cell.three-fourths,
+  .grid.lg .cell.one-fifth,
+  .grid.lg .cell.two-fifths,
+  .grid.lg .cell.three-fifths,
+  .grid.lg .cell.four-fifths {
+    width: auto;
+    flex: 1;
   }
 }
 form.grid {
@@ -205,7 +263,7 @@ label.cell {
 }
 .btn {
   height: 2.5em;
-  padding: .5em;
+  padding: .5em .75em;
   background-color: #f2f2f2;
   border: 1px solid #cccccc;
   border-radius: 3px;
@@ -267,6 +325,26 @@ form input + .btn {
 }
 .input-group :last-child:not(.input) {
   border-left: none;
+}
+table.table {
+  width: 100%;
+  text-align: left;
+}
+table.table td,
+table.table th {
+  padding: .25em .5em;
+}
+table.table thead td,
+table.table thead th {
+  border-bottom: 2px solid #cccccc;
+}
+table.table tbody td,
+table.table tbody th {
+  border-bottom: 1px solid #cccccc;
+}
+table.table tbody tr:last-child td,
+table.table tbody tr:last-child th {
+  border-bottom: none;
 }
 .media {
   display: flex;

@@ -57,14 +57,41 @@
 
 		<h3>Column Widths</h3>
 		<p>If you need to specify column widths, you can add a fractional class like <code>one-half</code>, <code>one-fifth</code>, <code>two-thirds</code>, etc. When using width classes or other custom widths, cells will wrap to new lines automatically when there isn't enough width to fit them all.</p>
-		<div class="grid example-grid text-center">
+		<div class="grid sm example-grid text-center">
 			<div class="cell one-fifth">1/5</div>
 			<div class="cell one-third">1/3</div>
 			<div class="cell">(auto width)</div>
 		</div>
 
 		<h3>Responsive Grid</h3>
-		<p>All top-level grids will change their columns to rows on devices under <code>768px</code> width. You can force either a row or column layout by adding <code>.row</code> or <code>.column</code> class to a <code>.grid</code> element.</p>
+		<p>By default, all <code>.cell</code>s display as rows on small devices, and columns on desktop. You can add classes to the <code>.grid</code> to control when the cell layout switches.</p>
+		<table class="table" style="max-width: 500px;">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Phones</th>
+					<th>Tablets</th>
+					<th>Laptops</th>
+					<th>Desktop</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Class</th>
+					<td><code>xs</code></td>
+					<td><code>sm</code></td>
+					<td><code>md</code></td>
+					<td><code>lg</code></td>
+				</tr>
+				<tr>
+					<th>Width</th>
+					<td>&lt;768px</td>
+					<td>&gt;768px</td>
+					<td>&gt;992px</td>
+					<td>&gt;1200px</td>
+				</tr>
+			</tbody>
+		</table>
 
 		<h3>Alignment</h3>
 		<p><code>.cell</code>s can be aligned within a <code>.grid</code> by adding <code>.cell-top</code>, <code>.cell-center</code>, or <code>.cell-bottom</code>.</p>
